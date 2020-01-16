@@ -1,0 +1,98 @@
+.snake-segment {
+  position: absolute;
+  background: lime;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+
+/* Directions in segments correspond to the connecting sides, e.g. an L-shape would be north-east */
+
+/* End segments */
+.snake-segment--north {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 0 0 50% 50%;
+}
+.snake-segment--east {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 50% 0 0 50%;
+}
+.snake-segment--south {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 50% 50% 0 0;
+}
+.snake-segment--west {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0 50% 50% 0;
+}
+
+/* Straight segments */
+.snake-segment--northsouth {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.snake-segment--southnorth {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.snake-segment--eastwest {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.snake-segment--westeast {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* Corner segments */
+.snake-segment--northeast {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom-left-radius: 50%;
+}
+.snake-segment--eastnorth {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom-left-radius: 50%;
+}
+.snake-segment--northwest {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom-right-radius: 50%;
+}
+.snake-segment--westnorth {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom-right-radius: 50%;
+}
+.snake-segment--southeast {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-top-left-radius: 50%;
+}
+.snake-segment--eastsouth {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-top-left-radius: 50%;
+}
+.snake-segment--southwest {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-top-right-radius: 50%;
+}
+.snake-segment--westsouth {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-top-right-radius: 50%;
+}

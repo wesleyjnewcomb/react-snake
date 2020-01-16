@@ -1,0 +1,23 @@
+.game {
+  display: grid;
+  grid-template-areas:
+    'score'
+    'board';
+}
+.game__score {
+  background: black;
+  color: white;
+  height: 3rem;
+  grid-area: score;
+  margin: auto;
+  border-bottom: 2px solid white;
+  padding: 1em 2em;
+  text-align: right;
+}
+.game__board {
+  grid-area: board;
+  position: relative;
+  margin: auto;
+  background: black;
+  outline: none;
+}
