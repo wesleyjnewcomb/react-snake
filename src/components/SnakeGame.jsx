@@ -54,8 +54,8 @@ class SnakeGame extends Component {
   }
 
   componentDidMount() {
-    const highScore = localStorage.getItem('highScore');
-    this.setState({ highScore: highScore || 0 });
+    const highScore = localStorage.getItem('highScore') || 0;
+    this.setState({ highScore: highScore });
   }
 
   componentWillUnmount() {
