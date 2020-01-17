@@ -54,8 +54,8 @@ class SnakeGame extends Component {
   }
 
   componentDidMount() {
-    // TODO: Load high score from localStorage
-    this.setState({ highScore: 0 });
+    const highScore = localStorage.getItem('highScore');
+    this.setState({ highScore: highScore || 0 });
   }
 
   componentWillUnmount() {
@@ -112,7 +112,10 @@ class SnakeGame extends Component {
       if (apple.x === x && apple.y === y) {
         const newLength = length + 1;
         const newScore = score + 1;
-        const newHighScore = newScore > highScore ? newScore : highScore;
+        if (newScore > highScore) {
+          this.setState({ highScore: newScore });
+          localStorage.setItem('highScore', newScore);
+        }
         const newApple = {
           x: Math.floor(Math.random() * width),
           y: Math.floor(Math.random() * height)
@@ -121,7 +124,6 @@ class SnakeGame extends Component {
         this.setState({
           length: newLength,
           score: newScore,
-          highScore: newHighScore,
           apple: newApple
         });
       }
