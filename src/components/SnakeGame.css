@@ -4,7 +4,7 @@
     'score'
     'board';
 }
-.game__score {
+.game__header {
   background: black;
   color: white;
   height: 3rem;
@@ -12,8 +12,14 @@
   margin: auto;
   border-bottom: 2px solid white;
   padding: 1em 2em;
-  text-align: right;
 }
+.game__header > .high-score {
+  float: left;
+}
+.game__header > .score {
+  float: right;
+}
+
 .game__board {
   grid-area: board;
   position: relative;

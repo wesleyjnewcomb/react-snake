@@ -1,7 +1,7 @@
 export const TILE_WIDTH = 16;
-export const DIRECTION = {
-  NORTH: 0,
-  EAST: 1,
-  SOUTH: 2,
-  WEST: 3
+export const GAME_STATE = {
+  TITLE: 0,
+  SNAKE: 1,
+  PAUSED: 2,
+  GAME_OVER: 3
 };
